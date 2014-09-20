@@ -2,9 +2,7 @@
 // Created by Oleg Trifonov on 11.09.2014.
 // All rights reserved.
 //
-
-#include <iostream>
-#include <cmath>
+#include <locale.h>
 #include "myLibOfFirstLab.h"
 
 int main() {
