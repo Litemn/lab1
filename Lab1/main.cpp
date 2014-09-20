@@ -2,8 +2,8 @@
 // Created by Oleg Trifonov on 11.09.2014.
 // All rights reserved.
 //
-#include <locale.h>
 #include "myLibOfFirstLab.h"
+#include <iostream>
 
 int main() {
 
