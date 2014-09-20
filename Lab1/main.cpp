@@ -5,44 +5,25 @@
 
 #include <iostream>
 #include <cmath>
-
-using namespace std;
-
-void inputCoordinates(int* x, int* y);
-bool checkIfHit(int x, int y);
-void outputResult(bool hit);
+#include "myLibOfFirstLab.h"
 
 int main() {
 
 	setlocale(LC_ALL, "rus");
 
-	int* coordinateX = new int;
-	int* coordinateY = new int;
+	double* coordinateX = (double*)(malloc(sizeof(double)));
+	double* coordinateY = (double*)(malloc(sizeof(double)));
+
 	inputCoordinates(coordinateX, coordinateY);
 
 	bool hit = checkIfHit(*coordinateX, *coordinateY);
+
 	outputResult(hit);
 
 	system("pause");
 
-	delete coordinateY;
-	delete coordinateX;
+	free(coordinateY);
+	free(coordinateX);
 
 	return 0;
-}
-
-void inputCoordinates(int* x, int* y) {
-	cout << "Введите координаты в формате" << endl << "Координата Х Координата Y" << endl;
-	cin >> *x >> *y;
-}
-
-bool checkIfHit(int x, int y) {
-	if (((pow(x, 2) + pow(y, 2)) <= 4) && !((pow(x, 2) + pow(y, 2) < 1) && (pow(x, 2) + pow(y, 2) > 0.25)))
-		return 1;
-	else
-		return 0;
-}
-
-void outputResult(bool hit) {
-	cout << (hit? "" : "не ") << "попал!" << endl;
 }
