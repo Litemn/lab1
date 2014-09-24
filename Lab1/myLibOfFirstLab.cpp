@@ -4,8 +4,8 @@
 
 
 void inputCoordinates(double* x, double* y) {
-	std::cout << "Введите координаты в формате" << std::endl << "Координата Х Координата Y" << std::endl;
-	std::cin >> *x >> *y;
+	cout << "Введите координаты в формате" << endl << "Координата Х Координата Y" << endl;
+	cin >> *x >> *y;
 }
 
 bool checkIfHit(double& x, double& y) {
@@ -16,5 +16,5 @@ bool checkIfHit(double& x, double& y) {
 }
 
 void outputResult(bool hit) {
-	std::cout << (hit ? "" : "не ") << "попал!" << std::endl;
+	cout << (hit ? "" : "не ") << "попал!" << endl;
 }

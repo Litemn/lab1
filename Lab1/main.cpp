@@ -11,12 +11,20 @@ int main() {
 
 	double* coordinateX = (double*)(malloc(sizeof(double)));
 	double* coordinateY = (double*)(malloc(sizeof(double)));
+	bool* oneTimeAgain = (bool*)(malloc(sizeof(bool)));
+	
+	do {
 
-	inputCoordinates(coordinateX, coordinateY);
+		inputCoordinates(coordinateX, coordinateY);
 
-	bool hit = checkIfHit(*coordinateX, *coordinateY);
+		bool hit = checkIfHit(*coordinateX, *coordinateY);
 
-	outputResult(hit);
+		outputResult(hit);
+
+		cout << "Хотите еще? (1 - да, 0 - нет)" << endl;
+		cin >> *oneTimeAgain;
+
+	} while (*oneTimeAgain);
 
 	system("pause");
 
