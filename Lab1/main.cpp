@@ -21,13 +21,14 @@ int main() {
 
 		outputResult(hit);
 
-		cout << "Õîòèòå åùå? (1 - äà, 0 - íåò)" << endl;
+		cout << "Ã•Ã®Ã²Ã¨Ã²Ã¥ Ã¥Ã¹Ã¥? (1 - Ã¤Ã , 0 - Ã­Ã¥Ã²)" << endl;
 		cin >> *oneTimeAgain;
 
 	} while (*oneTimeAgain);
 
 	system("pause");
-
+	
+	free(oneTimeAgain);
 	free(coordinateY);
 	free(coordinateX);
 
