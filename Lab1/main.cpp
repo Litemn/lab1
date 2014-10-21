@@ -1,4 +1,4 @@
-//
+﻿//
 // Created by Oleg Trifonov on 11.09.2014.
 // All rights reserved.
 //
@@ -21,7 +21,7 @@ int main() {
 
 		outputResult(hit);
 
-		cout << "Õîòèòå åùå? (1 - äà, 0 - íåò)" << endl;
+		cout << "Еще раз? (1 - да, 0 - нет)" << endl;
 		cin >> *oneTimeAgain;
 
 	} while (*oneTimeAgain);
